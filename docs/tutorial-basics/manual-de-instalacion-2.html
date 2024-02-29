@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-tutorial-basics/manual-de-instalacion-2" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.1.1">
+<title data-rh="true">Manual de Instalación pt 2 | Documentación en Docusaurus</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https:Andrewwzzbq.github.com/MySiteDdr/"><meta data-rh="true" name="twitter:image" content="https:Andrewwzzbq.github.com/MySiteDdr/"><meta data-rh="true" property="og:url" content="https:Andrewwzzbq.github.com/MySiteDdr/docs/tutorial-basics/manual-de-instalacion-2"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Manual de Instalación pt 2 | Documentación en Docusaurus"><meta data-rh="true" name="description" content="Docker + GitLab + SSL"><meta data-rh="true" property="og:description" content="Docker + GitLab + SSL"><link data-rh="true" rel="icon" href="/MySiteDdr/img/favicon.ico"><link data-rh="true" rel="canonical" href="https:Andrewwzzbq.github.com/MySiteDdr/docs/tutorial-basics/manual-de-instalacion-2"><link data-rh="true" rel="alternate" href="https:Andrewwzzbq.github.com/MySiteDdr/docs/tutorial-basics/manual-de-instalacion-2" hreflang="en"><link data-rh="true" rel="alternate" href="https:Andrewwzzbq.github.com/MySiteDdr/docs/tutorial-basics/manual-de-instalacion-2" hreflang="x-default"><link rel="stylesheet" href="/MySiteDdr/assets/css/styles.3027602c.css">
+<script src="/MySiteDdr/assets/js/runtime~main.326c6bbd.js" defer="defer"></script>
+<script src="/MySiteDdr/assets/js/main.4c4904cb.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/MySiteDdr/"><div class="navbar__logo"><img src="https://i.imgur.com/eNrokV0.jpg" alt="/" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="https://i.imgur.com/eNrokV0.jpg" alt="/" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate"></b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/MySiteDdr/docs/intro">Manual</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/Andrewwzzbq?tab=repositories" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/MySiteDdr/docs/intro">¡Bienvenido al Manual de Instalación!</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" aria-expanded="true" href="/MySiteDdr/docs/category/manual-de-instalación">Manual de instalación</a><button aria-label="Collapse sidebar category &#x27;Manual de instalación&#x27;" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/MySiteDdr/docs/tutorial-basics/Manual-para-Instalación-de-Script">Manual para Instalación de Script</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/MySiteDdr/docs/tutorial-basics/Manual-de-instalacion">Manual de Instalación</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/MySiteDdr/docs/tutorial-basics/instlacion-facturador">Instalación del Facturador</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/MySiteDdr/docs/tutorial-basics/manual-de-instalacion-2">Manual de Instalación pt 2</a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/MySiteDdr/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/MySiteDdr/docs/category/manual-de-instalación"><span itemprop="name">Manual de instalación</span></a><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Manual de Instalación pt 2</span><meta itemprop="position" content="2"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><h1>Manual de Instalación pt 2</h1>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="docker--gitlab--ssl">Docker + GitLab + SSL<a href="#docker--gitlab--ssl" class="hash-link" aria-label="Direct link to Docker + GitLab + SSL" title="Direct link to Docker + GitLab + SSL">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="descripción">Descripción<a href="#descripción" class="hash-link" aria-label="Direct link to Descripción" title="Direct link to Descripción">​</a></h2>
+<ul>
+<li>Hemos elaborado un script para uso en instancias Linux, este es un archivo .sh que actualiza el sistema, instala las herramientas, sus dependencias, configura un certificado SSL renovable cada 90 días que debe ser confirmado en el proceso con su dominio y realiza todas las configuraciones previas, dejando el aplicativo listo para probar en menos de 20 minutos, su ejecución es muy sencilla.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="requisitos-previos">Requisitos previos<a href="#requisitos-previos" class="hash-link" aria-label="Direct link to Requisitos previos" title="Direct link to Requisitos previos">​</a></h2>
+<ol>
+<li>
+<p>Tener acceso a su servidor, vps, máquina virtual o local vía SSH, en las instalaciones que realizamos para AWS o Google Cloud, hacemos entrega del usuario, la IP del servidor y la clave ssh que puede ser un archivo .ppk o .pem.</p>
+</li>
+<li>
+<p>Tener instalado una versión de SSH en su máquina para conectarse de manera remota, puede utilizar Putty, Filezilla o una consola terminal.</p>
+</li>
+<li>
+<p>Es importante configurar su dominio apuntando a la IP de su instancia para que durante la ejecución del script se valide el certificado SSL y al finalizar la ejecución no tenga errores y todo esté listo para realizar pruebas. Edite los registros A y CNAME donde A debe contener su IP y CNAME el valor * (asterisco) para que se tomen los subdominios registrados por la herramienta.</p>
+</li>
+</ol>
+<p><img decoding="async" loading="lazy" alt="/" src="/MySiteDdr/assets/images/132-eef4297b2b0e58ba21bcfeab0841b4c3.png" width="860" height="467" class="img_ev3q"></p>
+<ol start="4">
+<li>
+<p>Durante la ejecución del script deberá almacenar en su dominio dos registros TXT con unos valores que se mostrarán en pantalla, estos registros son validados en directo y no pueden tardar más de 2 minutos en validarse en su dominio.</p>
+</li>
+<li>
+<p>En caso de contar con servicios instalados en su instancia como MySQL, Apache o Nginx, debe detenerlos, ya que estos ocupan los puertos que pasarán a usarse con el aplicativo y los contenedores de Docker.</p>
+</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="pasos">Pasos<a href="#pasos" class="hash-link" aria-label="Direct link to Pasos" title="Direct link to Pasos">​</a></h2>
+<ol>
+<li>
+<p>Acceder a su instancia vía SSH.</p>
+</li>
+<li>
+<p>Loguearse como super usuario ejecutando sudo su.</p>
+</li>
+<li>
+<p>Ubicarse en la carpeta del usuario, por ejemplo cd /home/ubuntu/.</p>
+</li>
+<li>
+<p>Crear el archivo install ejecutando touch install.sh.</p>
+</li>
+<li>
+<p>Editar el archivo con su editor preferido ejecutando nano install.sh.</p>
+</li>
+<li>
+<p>En el archivo debe agregar el contenido del siguiente enlace:</p>
+<ul>
+<li><a href="https://gitlab.com/snippets/1852652" target="_blank" rel="noopener noreferrer">https://gitlab.com/snippets/1852652</a>.</li>
+</ul>
+</li>
+</ol>
+<p>Observará a una página como la siguiente, donde debe copiar el contenido del script y pegarlo en su archivo install.sh, es importante que mantenga las estructura del mismo.</p>
+<p><img decoding="async" loading="lazy" alt="/" src="/MySiteDdr/assets/images/139-176884434eabd63f74c4c0f5b7d3e39e.png" width="621" height="366" class="img_ev3q"></p>
+<ol start="7">
+<li>
+<p>Para salir de editor y guardar puede presionar “ctrl + x” seguidamente se le consultará si desea guardar los cambios, confirme con “y” y luego “enter”.</p>
+</li>
+<li>
+<p>Debe darle permisos de ejecución al archivo<!-- -->:ejecute<!-- --> chmod +x install.sh</p>
+</li>
+<li>
+<p>El comando a utilizar requiere de dos parámetros principalmente:</p>
+<ul>
+<li>./install.sh [repositorio] [dominio]</li>
+</ul>
+<p>Por ejemplo:</p>
+<ul>
+<li>./install.sh <a href="https://gitlab.com/rash07/facturadorpro2" target="_blank" rel="noopener noreferrer">https://gitlab.com/rash07/facturadorpro2</a> elfacturador.com</li>
+</ul>
+</li>
+<li>
+<p>Una vez ejecutado el comando se iniciará un proceso donde debe ir aceptando las preguntas y que le mostrará en pantalla los valores que debe añadir en los 2 récords tipo TXT de su dominio con nombre</p>
+<ul>
+<li>_acme-challenge.example.com</li>
+<li>_acme-challenge (casos como godday y puntope)</li>
+</ul>
+</li>
+</ol>
+<p>En la siguiente imagen le muestran el valor como v703JW.... debera copiarlo y añadirlo al primer record TXT, seguidamente pulsar enter, se le mostrará en pantalla un segundo valor para el segundo TXT</p>
+<p><img decoding="async" loading="lazy" alt="/" src="/MySiteDdr/assets/images/140-1212a29e940d68e9a81a800f5f2477a1.png" width="618" height="152" class="img_ev3q"></p>
+<ol start="11">
+<li>Editados los récords en su dominio, deberá aceptar para continuar y que el proceso verifique que sea exitoso, de ser exitoso obtendrá una pantalla similar a la siguiente</li>
+</ol>
+<p><img decoding="async" loading="lazy" alt="/" src="/MySiteDdr/assets/images/141-734970d6167c7057243ba997841b49ff.png" width="615" height="298" class="img_ev3q"></p>
+<ol start="12">
+<li>Continuará el proceso de actualización del sistema, se le solicitará el usuario y contraseña de GitLab, para que se pueda clonar/descargar el proyecto en su instancia, luego culminará y tendrá los accesos listos en su dominio:</li>
+</ol>
+<p>Correo: <a href="mailto:admin@gmail.com" target="_blank" rel="noopener noreferrer">admin@gmail.com</a>
+Contraseña: 123456</p>
+<p>Una vez finalizado, puede proseguir con el manual de pruebas o demás documentación de cada proyecto, sus URL son:</p>
+<ul>
+<li>PRO1: <a href="https://gitlab.com/rash07/facturadorpro1" target="_blank" rel="noopener noreferrer">https://gitlab.com/rash07/facturadorpro1</a></li>
+<li>PRO2: <a href="https://gitlab.com/rash07/facturadorpro2" target="_blank" rel="noopener noreferrer">https://gitlab.com/rash07/facturadorpro2</a></li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="recomendaciones">Recomendaciones<a href="#recomendaciones" class="hash-link" aria-label="Direct link to Recomendaciones" title="Direct link to Recomendaciones">​</a></h2>
+<ul>
+<li>
+<p>Luego de instalar el facturador puede cambiar algunos parámetros en el archivo .env como:</p>
+<ul>
+<li>La dirección de envío de correos que utiliza el facturador para enviar los archivos pdf, xml y cdr a sus clientes</li>
+<li>Cambiar algunas configuraciones de plantillas de los pdf</li>
+<li>Entre otros.</li>
+</ul>
+</li>
+<li>
+<p>Recuerde que siempre que se edita el archivo .env debe utilizar el comando <code>php artisan config:cache</code> dentro del contenedor de fpm1, para más detalles puede observar el manual de actualización <a href="https://docs.google.com/document/d/11PI1a9yjCPfH9CCuWmJSrdj1V8IEUffqurqvdkw29co/edit#heading=h.5gkh9djmh9b" target="_blank" rel="noopener noreferrer">aquí</a>.</p>
+</li>
+<li>
+<p>La ruta donde ejecute el script será donde se clone el repositorio, debe verificar que los usuarios del servidor tengan permisos a dicha ruta si desea acceder desde ftp o scp</p>
+</li>
+</ul></div></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/MySiteDdr/docs/tutorial-basics/instlacion-facturador"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Instalación del Facturador</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#docker--gitlab--ssl" class="table-of-contents__link toc-highlight">Docker + GitLab + SSL</a></li><li><a href="#descripción" class="table-of-contents__link toc-highlight">Descripción</a></li><li><a href="#requisitos-previos" class="table-of-contents__link toc-highlight">Requisitos previos</a></li><li><a href="#pasos" class="table-of-contents__link toc-highlight">Pasos</a></li><li><a href="#recomendaciones" class="table-of-contents__link toc-highlight">Recomendaciones</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/MySiteDdr/docs/intro">Tutorial</a></li></ul></div><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.facebook.com/UnSolitariomas0/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Facebook<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://www.instagram.com/zfr_andrw/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Instagram<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/Andrewwzzbq" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2024  ----- My proyecto :)</div></div></div></footer></div>
+</body>
+</html>
