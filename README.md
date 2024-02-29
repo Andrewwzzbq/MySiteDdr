@@ -5,13 +5,13 @@ This website is built using [Docusaurus](https://docusaurus.io/), a modern stati
 ### Installation
 
 ```
-$ yarn
+$ npm run install
 ```
 
 ### Local Development
 
 ```
-$ yarn start
+$ np run serve
 ```
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
@@ -19,26 +19,17 @@ This command starts a local development server and opens up a browser window. Mo
 ### Build
 
 ```
-$ yarn build
+$ npm run build
 ```
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
 ### Deployment
 
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+
+
 
 ## En español
 
@@ -49,13 +40,13 @@ Este sitio web está creado utilizando [Docusaurus](https://docusaurus.io/), un 
 ### Instalación
 
 ```
-$ hilo
+$ npm run install
 ```
 
 ### Desarrollo Local
 
 ```
-$ inicio del hilo
+$ npm run serve
 ```
 
 Este comando inicia un servidor de desarrollo local y abre una ventana del navegador. La mayoría de los cambios se reflejan en vivo sin tener que reiniciar el servidor.
@@ -63,23 +54,10 @@ Este comando inicia un servidor de desarrollo local y abre una ventana del naveg
 ### Construir
 
 ```
-$ construcción de hilo
+$ npm run build
 ```
 
 Este comando genera contenido estático en el directorio `build` y se puede servir utilizando cualquier servicio de alojamiento de contenidos estáticos.
 
-### Implementación
-
-Usando SSH:
-
-```
-$ USE_SSH = implementación de hilo verdadero
-```
-
-Sin usar SSH:
-
-```
-$ GIT_USER=<Su nombre de usuario de GitHub> implementación de hilo
-```
 
 Si está utilizando páginas de GitHub para alojamiento, este comando es una forma conveniente de crear el sitio web y enviarlo a la rama `gh-pages`.
